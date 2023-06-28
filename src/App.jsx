@@ -5,8 +5,8 @@ import './App.css'
 
 function Home() {
   const [data, setData] = useState({
-    celcius: 10,
-    name: 'London',
+    celcius: 28,
+    name: 'Kathmandu',
     humidity: 10,
     speed: 2,
   })
@@ -15,8 +15,7 @@ function Home() {
 
   const handleClick = () => {
     if (name !== "") {
-
-      const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${name}&appid=a10980c711eb82828bd03ca3ddcfd349&units=metrics`
+      const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${name}&appid=a10980c711eb82828bd03ca3ddcfd349&units=metric`
 
       axios.get(apiUrl).then(res => {
         console.log(res.data);
